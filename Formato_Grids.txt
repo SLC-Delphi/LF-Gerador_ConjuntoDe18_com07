@@ -1,0 +1,15 @@
+18
+
+1 - bloco de 8
+- 5 + 3
+- 5 = 3 s e 2 ns
+- 3 = S + ns + S
+
+2- bloco de 4
+ - 2s 1ns 1s
+ - 1s 1ns 2s
+
+3- bloco de 3 s
+
+Restam 3 
+- 1 S
