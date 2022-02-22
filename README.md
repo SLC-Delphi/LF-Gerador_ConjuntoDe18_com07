@@ -9,7 +9,7 @@ Lembre-se da observação colocada no repositório acima citado.
 
 Na pasta emails_recebidos_definicoes contem as descrições do desafio a ser transformado em algotirmos.
 
-Observação 2: Serviço desenvolvido aos finais de semana.
+Observação 2: Serviço desenvolvido aos finais de semana e/ou em horas vagas.
 
 Observação 3: Ainda em desenvolvimento, seguindo o que pede o proprietário.
 
