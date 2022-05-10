@@ -286,7 +286,7 @@ object Frm_cjunto18por7: TFrm_cjunto18por7
           object Label100: TLabel
             Left = 1
             Top = 100
-            Width = 900
+            Width = 104
             Height = 16
             HelpType = htKeyword
             HelpKeyword = 'l'
@@ -322,7 +322,7 @@ object Frm_cjunto18por7: TFrm_cjunto18por7
           object Label102: TLabel
             Left = 1
             Top = 143
-            Width = 900
+            Width = 127
             Height = 16
             HelpType = htKeyword
             HelpKeyword = 'l'
@@ -340,7 +340,7 @@ object Frm_cjunto18por7: TFrm_cjunto18por7
           object Label103: TLabel
             Left = 1
             Top = 165
-            Width = 900
+            Width = 103
             Height = 16
             HelpType = htKeyword
             HelpKeyword = 'l'
@@ -550,7 +550,7 @@ object Frm_cjunto18por7: TFrm_cjunto18por7
               Left = 8
               Top = 53
               Width = 700
-              Height = 22621
+              Height = 22604
               TabStop = False
               Anchors = [akLeft, akTop, akBottom]
               BorderStyle = bsNone
@@ -580,7 +580,7 @@ object Frm_cjunto18por7: TFrm_cjunto18por7
               Left = 835
               Top = 53
               Width = 140
-              Height = 1021
+              Height = 1004
               TabStop = False
               Anchors = [akLeft, akTop, akBottom]
               BorderStyle = bsNone
@@ -633,7 +633,7 @@ object Frm_cjunto18por7: TFrm_cjunto18por7
               Left = 714
               Top = 50
               Width = 95
-              Height = 22621
+              Height = 22604
               TabStop = False
               Anchors = [akLeft, akTop, akBottom]
               BorderStyle = bsNone
@@ -682,7 +682,7 @@ object Frm_cjunto18por7: TFrm_cjunto18por7
               Left = 976
               Top = 53
               Width = 250
-              Height = 1021
+              Height = 1004
               TabStop = False
               Anchors = [akLeft, akTop, akBottom]
               BorderStyle = bsNone
@@ -746,6 +746,7 @@ object Frm_cjunto18por7: TFrm_cjunto18por7
             Top = 0
             Width = 1381
             Height = 224
+            HorzScrollBar.Position = 690
             HorzScrollBar.Range = 2050
             VertScrollBar.Range = 400
             Align = alClient
@@ -756,7 +757,7 @@ object Frm_cjunto18por7: TFrm_cjunto18por7
               1360
               203)
             object Label62: TLabel
-              Left = 8396
+              Left = 7706
               Top = 4
               Width = 61
               Height = 18
@@ -774,7 +775,7 @@ object Frm_cjunto18por7: TFrm_cjunto18por7
               WordWrap = True
             end
             object Label64: TLabel
-              Left = 8568
+              Left = 7878
               Top = 4
               Width = 61
               Height = 18
@@ -792,7 +793,7 @@ object Frm_cjunto18por7: TFrm_cjunto18por7
               WordWrap = True
             end
             object Label65: TLabel
-              Left = 8732
+              Left = 8042
               Top = 4
               Width = 61
               Height = 18
@@ -810,7 +811,7 @@ object Frm_cjunto18por7: TFrm_cjunto18por7
               WordWrap = True
             end
             object Label66: TLabel
-              Left = 8896
+              Left = 8206
               Top = 3
               Width = 61
               Height = 18
@@ -828,7 +829,7 @@ object Frm_cjunto18por7: TFrm_cjunto18por7
               WordWrap = True
             end
             object Label67: TLabel
-              Left = 9062
+              Left = 8372
               Top = 4
               Width = 61
               Height = 18
@@ -846,7 +847,7 @@ object Frm_cjunto18por7: TFrm_cjunto18por7
               WordWrap = True
             end
             object Label57: TLabel
-              Left = 8
+              Left = -682
               Top = 4
               Width = 347
               Height = 18
@@ -862,7 +863,7 @@ object Frm_cjunto18por7: TFrm_cjunto18por7
               Transparent = False
             end
             object Label4: TLabel
-              Left = 440
+              Left = -250
               Top = 21
               Width = 389
               Height = 18
@@ -878,7 +879,7 @@ object Frm_cjunto18por7: TFrm_cjunto18por7
               Transparent = False
             end
             object Label5: TLabel
-              Left = 840
+              Left = 150
               Top = 21
               Width = 279
               Height = 32
@@ -895,7 +896,7 @@ object Frm_cjunto18por7: TFrm_cjunto18por7
               WordWrap = True
             end
             object Label6: TLabel
-              Left = 1134
+              Left = 444
               Top = 21
               Width = 215
               Height = 32
@@ -912,7 +913,7 @@ object Frm_cjunto18por7: TFrm_cjunto18por7
               WordWrap = True
             end
             object Label9: TLabel
-              Left = 1409
+              Left = 729
               Top = 21
               Width = 338
               Height = 18
@@ -927,11 +928,30 @@ object Frm_cjunto18por7: TFrm_cjunto18por7
               ParentFont = False
               Transparent = False
             end
+            object Label10: TLabel
+              Left = 1079
+              Top = 21
+              Width = 171
+              Height = 48
+              Caption = 
+                'Fase 1.2.B  Bloco c  / 2 SORTEADOS a partir do bloco de 3 (1.3.A' +
+                ')'
+              Color = 4271365
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = 7791096
+              Font.Height = -13
+              Font.Name = 'Verdana'
+              Font.Style = [fsBold]
+              ParentColor = False
+              ParentFont = False
+              Transparent = True
+              WordWrap = True
+            end
             object Stgr_BlocoBase8: TStringGrid
-              Left = 8
+              Left = -682
               Top = 26
               Width = 430
-              Height = 22301
+              Height = 22280
               TabStop = False
               Anchors = [akLeft, akTop, akBottom]
               BorderStyle = bsNone
@@ -978,10 +998,10 @@ object Frm_cjunto18por7: TFrm_cjunto18por7
                 23)
             end
             object Stgr_Bloco_5Base8: TStringGrid
-              Left = 444
+              Left = -246
               Top = 43
               Width = 365
-              Height = 22301
+              Height = 22280
               TabStop = False
               Anchors = [akLeft, akTop, akBottom]
               BorderStyle = bsNone
@@ -1017,10 +1037,10 @@ object Frm_cjunto18por7: TFrm_cjunto18por7
                 23)
             end
             object Stgr_bloco3S_5Base8: TStringGrid
-              Left = 841
+              Left = 151
               Top = 55
               Width = 290
-              Height = 22301
+              Height = 22280
               TabStop = False
               Anchors = [akLeft, akTop, akBottom]
               BorderStyle = bsNone
@@ -1063,10 +1083,10 @@ object Frm_cjunto18por7: TFrm_cjunto18por7
                 23)
             end
             object Stgr_bloco2NS_5Base8: TStringGrid
-              Left = 1132
+              Left = 442
               Top = 55
               Width = 255
-              Height = 22301
+              Height = 22280
               TabStop = False
               Anchors = [akLeft, akTop, akBottom]
               BorderStyle = bsNone
@@ -1101,10 +1121,10 @@ object Frm_cjunto18por7: TFrm_cjunto18por7
                 23)
             end
             object Stgr_Bloco_3Base8: TStringGrid
-              Left = 1411
+              Left = 731
               Top = 43
               Width = 315
-              Height = 22301
+              Height = 22280
               TabStop = False
               Anchors = [akLeft, akTop, akBottom]
               BorderStyle = bsNone
@@ -1126,6 +1146,44 @@ object Frm_cjunto18por7: TFrm_cjunto18por7
               Options = [goFixedVertLine, goFixedHorzLine, goHorzLine, goRangeSelect]
               ParentFont = False
               TabOrder = 4
+              RowHeights = (
+                23
+                23
+                23
+                23
+                23
+                23
+                23
+                23
+                23
+                23
+                23)
+            end
+            object Stgr_bloco2S_3Base8: TStringGrid
+              Left = 1074
+              Top = 55
+              Width = 255
+              Height = 22280
+              TabStop = False
+              Anchors = [akLeft, akTop, akBottom]
+              BorderStyle = bsNone
+              Color = 8021596
+              DefaultColWidth = 33
+              DefaultRowHeight = 23
+              DrawingStyle = gdsGradient
+              FixedColor = 11314341
+              FixedCols = 3
+              RowCount = 11
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = 12184570
+              Font.Height = -12
+              Font.Name = 'Tahoma'
+              Font.Style = []
+              GradientEndColor = 11508367
+              GradientStartColor = 10520445
+              Options = [goFixedVertLine, goFixedHorzLine, goHorzLine, goRangeSelect]
+              ParentFont = False
+              TabOrder = 5
               RowHeights = (
                 23
                 23

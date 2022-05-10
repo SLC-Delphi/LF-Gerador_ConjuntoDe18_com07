@@ -107,6 +107,8 @@ type
     Label101: TLabel;
     Label102: TLabel;
     Label103: TLabel;
+    Label10: TLabel;
+    Stgr_bloco2S_3Base8: TStringGrid;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure Bbt_gerarSequenciasClick(Sender: TObject);
@@ -140,6 +142,7 @@ type
     procedure LimparGrid_bloco3S_5Base8;
     procedure LimparGrid_bloco2NS_5Base8;
     procedure Bloco_de_3Base8;
+    procedure Bloco_de_2Base5;
     { Private declarations }
   public
     { Public declarations }
@@ -342,6 +345,7 @@ begin
    Bloco_de_5Base8();
    Bloco_de_3Base5();
    Bloco_de_3Base8();
+   Bloco_de_2Base5();
    LA_gFIM_GERAR.Caption := DateToStr(Date) +' - ' + TimeToStr(Time);
 //   LA_rQTD_COMB.Caption :=stgr_flagFiltro4Blocos.Cells[0,1];
 //   vsQuery := vsQuery + 'select count(distinct(dados07numeros)) as QTD ';
@@ -417,7 +421,7 @@ var
 begin
    viLinhas := 1;
    pgbr_GerandoBloco5.Position := 0;
-   for viAnaliseCombinatoria := 1 to Trunc((Stgr_BlocoBase8.RowCount-1)/1) do
+   for viAnaliseCombinatoria := 1 to Trunc((Stgr_BlocoBase8.RowCount-1)/01) do  // /43
    begin
       for viComb1 := 2 to Stgr_BlocoBase8.ColCount-5 do
       begin
@@ -607,6 +611,90 @@ begin
    Label103.Repaint;
    ReconstroiTela;
 end;
+
+
+
+procedure TFrm_cjunto18por7.Bloco_de_2Base5;
+var
+   viAnaliseCombinatoria, viComb1, viComb2, ViContarCelulas, viContarColunas, viLinhas, viTotalLinhas : Integer;
+begin
+   Label100.Caption := 'Bloco_de_2//5 comecou';
+   Label100.Repaint;
+   viLinhas := 1;
+   viTotalLinhas := 1;
+   pgbr_GerandoBloco3e2.Position := 0;
+   for viAnaliseCombinatoria := 1 to Stgr_Bloco_3Base8.RowCount-1 do
+   begin
+      for viComb1 := 3 to Stgr_Bloco_3Base8.ColCount-2 do
+      begin
+         for viComb2 := viComb1+1 to Stgr_Bloco_3Base8.ColCount-1 do
+         begin
+            Stgr_bloco2S_3Base8.Cells[00,viLinhas] := viTotalLinhas.ToString;
+            Stgr_bloco2S_3Base8.Cells[01,viLinhas] := Stgr_Bloco_3Base8.Cells[0, viAnaliseCombinatoria];
+            Stgr_bloco2S_3Base8.Cells[02,viLinhas] := Stgr_Bloco_3Base8.Cells[1, viAnaliseCombinatoria];
+            Stgr_bloco2S_3Base8.Cells[03,viLinhas] := Stgr_Bloco_3Base8.Cells[viComb1, viAnaliseCombinatoria];
+            Stgr_bloco2S_3Base8.Cells[04,viLinhas] := Stgr_Bloco_3Base8.Cells[viComb2, viAnaliseCombinatoria];
+//                  Falso_Linha1TodosNumeros;
+//                  Falso_Linha2TodosNumeros;
+//                  for viContarColunas := 03 to 07 do
+//                  begin
+//                     Stgr_Todos_Numeros.Cells[(STRtoINT(Stgr_Bloco_3Base8.Cells[viContarColunas, (Stgr_bloco2S_3Base8.Cells[01,viLinhas]).ToInteger])), 1] := 'V';
+//                  end;
+//                  for viContarColunas := 03 to 05 do
+//                  begin
+//                     Stgr_Todos_Numeros.Cells[(STRtoINT(Stgr_bloco2S_3Base8.Cells[viContarColunas, viLinhas])), 2] := 'V';
+//                  end;
+//                  ViContarCelulas := 1;
+//                  FOR viContarColunas :=1 TO 25 DO
+//                  BEGIN
+//                     IF (Stgr_Todos_Numeros.Cells[viContarColunas,1]='V') and (Stgr_Todos_Numeros.Cells[viContarColunas,2]='F') THEN
+//                     BEGIN
+//                          Stgr_bloco2NS_5Base8.Cells [ViContarCelulas+2, viLinhas] := RIGHTSTR ('0'+(Stgr_Todos_Numeros.Cells[viContarColunas,0]),2) ;
+//                          ViContarCelulas := ViContarCelulas+1;
+//                     END; // IF (STRGR_TODOS_NUMEROS
+//                  END; // FOR viContarColunas
+            viLinhas := viLinhas +1;
+            viTotalLinhas := viTotalLinhas +1;
+         end; // for viComb2
+         if viAnaliseCombinatoria MOD 6750 = 0 then    //45000   ou 13500
+         begin
+            ReconstroiTela;
+         end;
+         if viAnaliseCombinatoria MOD viDivisorSalvar1 = 0 then    //45000
+         begin
+//            LimparGrid_bloco3S_5Base8;
+//            LimparGrid_bloco2NS_5Base8;
+            viLinhas := 1;
+            ReconstroiTela;
+         end;
+      end; // for viComb1
+      if viAnaliseCombinatoria MOD viDivisorAtualizar1 = 0 then    //45000
+      begin
+         Stgr_bloco2S_3Base8.RowCount := viLinhas;
+         Stgr_bloco2S_3Base8.Repaint;
+//         Stgr_bloco2NS_5Base8.RowCount := viLinhas;
+//         Stgr_bloco2NS_5Base8.Repaint;
+         pgbr_GerandoBloco3e2.Position := trunc((viAnaliseCombinatoria / (Stgr_Bloco_3Base8.RowCount-1))*100);
+         pgbr_GerandoBloco3e2.Repaint;
+         sleep (viTime1);
+      end;
+   end;
+   Stgr_BlocoBase8.Cells[0,0] := viTotalLinhas.ToString;
+   Stgr_BlocoBase8.Repaint;
+   Stgr_Bloco_3Base8.Cells[0,0] := viTotalLinhas.ToString;
+   Stgr_Bloco_3Base8.Repaint;
+   pgbr_GerandoBloco3e2.Position := 100;
+   pgbr_GerandoBloco3e2.Repaint;
+   Stgr_bloco2S_3Base8.RowCount := viLinhas;
+   Stgr_bloco2S_3Base8.Repaint;
+//   Stgr_bloco2NS_5Base8.RowCount := viLinhas;
+//   Stgr_bloco2NS_5Base8.Repaint;
+   Label101.Caption := 'Bloco_de_2//3 TERMINOU';
+   Label101.Repaint;
+   ReconstroiTela;
+end;
+
+
 
 
 procedure TFrm_cjunto18por7.RadioButton_teste1Click(Sender: TObject);
