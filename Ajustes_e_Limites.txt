@@ -1,0 +1,24 @@
+Posicao08  ou Posicao10
+Stgr_Bloco3S_Base10.Cells[01,viLinhas] := Stgr_BlocoBase10.Cells[0, viAnaliseCombinatoria];
+Stgr_BlocoBase07.Cells[01,viLinhas] :=Stgr_Bloco3S_Base10.Cells[01,viLinhas] ;
+  Stgr_Bloco1nS_Base07.Cells[02,viLinhas] := Stgr_BlocoBase07.Cells[1, viAnaliseCombinatoria];
+  Stgr_BlocoBase06.Cells[02,viLinhas] := Stgr_BlocoBase07.Cells[1, viAnaliseCombinatoria]; 
+	viLinhaCapturar := Stgr_BlocoBase06.Cells[2, viAnaliseCombinatoria].ToInteger;
+		Stgr_Bloco10S.Cells[03,viLinhas2+viContaSerie7] := viLinhaCapturar.ToString;	
+
+
+Posicao 03de10
+Stgr_Bloco3S_Base10.Cells[00,viLinhas]
+ Stgr_BlocoBase07.Cells[00,viLinhas] :=Stgr_Bloco3S_Base10.Cells[00,viLinhas] ;
+	Stgr_Bloco1nS_Base07.Cells[01,viLinhas] := Stgr_BlocoBase07.Cells[0, 
+	Stgr_BlocoBase06.Cells[01,viLinhas] :=Stgr_Bloco1nS_Base07.Cells[01,viLinhas] ;
+		Stgr_Bloco5S_Base06.Cells[02,viLinhas] := Stgr_BlocoBase06.Cells[1, viAnaliseCombinatoria];
+		Stgr_Bloco10S.Cells[02,viLinhas2+viContaSerie7] := Stgr_Bloco5S_Base06.Cells[02,viLinhas];
+
+
+1680 x 25200= 42.336.000
+42.336.000 x 80 = 3.386.880.000
+3.386.880.000 x 45 = 152.409.600.000 (145,35 GB)
+
+
+560 x 12600 = 7.056.000
